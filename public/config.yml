@@ -1,0 +1,100 @@
+backend:
+  name: git-gateway
+media_folder: public/img
+public_folder: img
+logo_url: https://luckycattoken.co/luckycat-new.png
+collections:
+  - name: "pages"
+    label: "Pages"
+    description: Edit the content of the site pages. Note that the design/layout of the page will need to be edited in the website code. The preview shows roughly how the site will look, and is not recommended for use on mobile devices.
+    files:
+      - label: "Home"
+        name: "home"
+        file: "src/content/home.md"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - {
+                  label: "Tagline Emphasis",
+                  name: "taglineEmphasis",
+                  widget: "string",
+                }
+              - { label: "Content", name: "content", widget: "text" }
+              - { label: "Hook", name: "hook", widget: "string" }
+              - { label: "Hero Image", name: "image", widget: "image" }
+          - label: "Banner"
+            name: "banner"
+            widget: "object"
+            fields:
+              - { label: "address", name: "address", widget: "string" }
+              - { label: "link", name: "link", widget: "string" }
+          - label: "Project"
+            name: "project"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Content", name: "content", widget: "text" }
+          - label: "Tokenomics"
+            name: "tokenomics"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "string",
+                    }
+          - label: "How To Buy"
+            name: "howToBuy"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: Description, name: description, widget: string }
+              - { label: "Youtube Link", name: "youtube", widget: "string" }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - {
+                  label: "Tagline Emphasis",
+                  name: "taglineEmp",
+                  widget: "string",
+                }
+              - { label: "Tag Description", name: "tagDesc", widget: "string" }
+              - label: "Testimonials"
+                name: "testimonials"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Role", name: "role", widget: "string" }
+                  - { label: "Content", name: "content", widget: "text" }
+                  - { label: "Image", name: "image", widget: image }
+          - label: "Community"
+            name: "community"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subheading", name: "subheading", widget: "string" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Twitter URL", name: "twitterUrl", widget: "string" }
+              - { label: "Telegram URL", name: "telegramUrl", widget: "string" }
+              - { label: "Reddit URL", name: "redditUrl", widget: "string" }
+              - { label: "Discord URL", name: "discordUrl", widget: "string" }
